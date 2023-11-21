@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+    <div class="main">
+                <center>Customer Survey Form</center>
+    </div>
+    <br>
+    <center><div class="forms">
+        <center><form id="demo_form">
+            <label>First name</label>
+            <input type="text" required id="first"><br>
+            <label>Last name</label>
+            <input type="text" required id="last"><br>
+            <label>Date of Birth</label>
+            <input type="date" required id="dob"><br>
+            <label>Country</label>
+            <select required id="con">
+                <option value="india">india</option>
+                <option value="USA">USA</option>
+                <option value="china">china</option>
+                <option value="canada">canada</option>
+            </select><br>
+            <div class="rad"><label>Gender</label>
+            <input type="radio" name="Gen" value="male" required id="male" class="rad"><label for="male">male</label>
+            <input type="radio" name="Gen"value="female"  class="rad"><label>female</label>
+            </div><label>profession</label>
+            <input id="pro" type="text" required><br>
+            <label>Email</label>
+            <input type="email" id="eml" required>
+            <label>Mob number</label>
+            <input type="text" required id="mob">
+            <button value="reset" onclick="reset()">reset</button>
+            <button type="submit" value="ok" onclick="myfuction()">submit</button>
+        </form></center>
+    </div></center>
+</div>
+</body>
+<script>
+    function myfuction(){
+        var First=document.getElementById("first")
+        var Last=document.getElementById("last")
+        var date=document.getElementById("dob")
+        var Con=document.getElementById("con")
+        var Mal=document.getElementById("male")
+        // var Mal=document.getElementById("female")
+        var Pro=document.getElementById("pro")
+        alert("first name is "+First.value+ "\nLast name is "+Last.value+"\ndate of birth "+date.value
+        +"\ncountry "+Con.value+"\nGender "+Mal.value)
+    }
+    function reset(){
+        const formToReset = document.getElementById('demo_form');
+      formToReset.addEventListener(e)
+         e.preventDefault();
+         formToReset.reset();
+    }
+</script>
+</html> 
