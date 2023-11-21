@@ -1,0 +1,36 @@
+<html>
+    <body>
+        ENTER THE LENGTH OF ARRAY &nbsp;
+        <input type="text" id="txt">
+        <br>
+        <button onclick="myfuction()">submit</button>
+        <p>Sorted array in descending order is:</p>
+        <p id="demo"></p>
+        <script>
+            function myfuction()
+            {
+                var temp=0
+                var ar=[]
+                var i;
+                var x=document.getElementById("txt").value
+                for(i=0;i<x;i++)
+                {
+                    ar[i]=prompt("enter  element");
+                }
+                for(i=0;i<x;i++)
+                    {
+                    for(var j=i+1;j<x;j++)
+                    {
+                    if(ar[j]>ar[i])
+                    {
+                    temp=ar[i];
+                    ar[i]=ar[j];
+                    ar[j]=temp;
+                    }
+                    }
+                    }
+                document.getElementById("demo").innerHTML=ar
+            }
+        </script>
+    </body>
+</html>

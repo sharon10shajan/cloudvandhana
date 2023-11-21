@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: darkgray;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calc{
+    border-radius: 28px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4,66px);
+}
+input{
+    
+    grid-column: span 3;
+    height:50px;
+    width: 240px;
+    background-color: white;
+    border: 0;
+    font-size: 25px;
+}
+button{
+   background-color: black; 
+   color: white;
+   width: 80px;
+   height: 50px;
+   border: none;
+
+   
+}
+.AC{
+    background-color: rgb(20, 131, 143);
+    font-size: larger;
+    
+}
+.add{
+    background-color: gray;
+    font-size: large;
+}

@@ -1,0 +1,39 @@
+2<html>
+    <head>
+        <body>
+            <h1>enter the sentence to reverse</h1>
+            <input type="textbox" id="tex"></input>
+            <button onclick="myfunction()"> click to reverse</button>
+            <p>Reverse of the string is:</p>
+            <p id="demo"></p>
+            
+            <script>
+                function myfunction(){
+                  var x=document.getElementById("tex").value;
+                  var m="";
+                  var z=0;
+                  var j;
+                  for(var i=0;i<x.length;i++)
+                  {
+                    if(x[i]==' ')
+                    {
+                        for(j=i-1;j>=z;j--)
+                        {
+                            m=m+x[j]
+                        }
+                        m=m+" "
+                        z=i+1
+                    }  
+                    if(i==x.length-1)
+                    {
+                        for(j=i;j>=z;j--)
+                        m=m+x[j]
+                    }                               
+                  }  
+                  document.getElementById("demo").innerHTML= m
+
+                }
+            </script>
+        </body>
+    </head>
+</html>
